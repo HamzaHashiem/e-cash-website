@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-Cash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/scroll-animation.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/nav-bar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/modals.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+  <body>
+    <!-- Back To Top Button -->
+    <div class="back-top">
+      <i class="fas fa-chevron-up back-top__icon"></i>
+    </div>
+    <!-- End Back To Top Button -->
+
+    <!-- Navbar-->
+    <nav class="nav-bar navbar navbar-expand-lg">
+      <div class="nav-bar__logo navbar-brand">
+        <a href="/">
+          <img
+            src="./assets/images/logo.svg"
+            alt="E-Cash Logo"
+            class="nav-bar__logo__img"
+        /></a>
+      </div>
+
+      <button
+        id="navbar-toggler-btn"
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarLinks"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="nav-bar__links collapse navbar-collapse" id="navbarLinks">
+        <a
+          href="/#about-us"
+          data-i18n="navbar.about-e-cash"
+          class="nav-bar__links__item"
+          >About e-Cash</a
+        >
+        <a
+          href="/#our-services"
+          data-i18n="navbar.our-services"
+          class="nav-bar__links__item"
+          >Our Services</a
+        >
+        <a
+          href="/#benefits"
+          data-i18n="navbar.benefits"
+          class="nav-bar__links__item"
+          >Benefits</a
+        >
+        <a
+          href="/#how-it-works"
+          data-i18n="navbar.how-it-works"
+          class="nav-bar__links__item"
+          >How it works</a
+        >
+        <a
+          data-i18n="navbar.careers"
+          class="nav-bar__links__item"
+          href="/careers.html"
+          >Careers</a
+        >
+        <a
+          data-toggle="modal"
+          data-target="#getInTouchModal"
+          data-i18n="navbar.get-in-touch"
+          class="nav-bar__links__item"
+          >Get in touch</a
+        >
+      </div>
+      <div class="nav-bar__join">
+        <button
+          data-toggle="modal"
+          data-target="#joinUsModal"
+          class="nav-bar__join__btn"
+        >
+          <span data-i18n="navbar.join-e-cash">Join e-Cash</span>
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Hero -->
+    <section class="hero">
+      <lottie-player
+        class="hero__image"
+        src="./assets/lotties/Card Animation.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
+
+      <h1 data-san="fadeIn" data-i18n="hero.title" class="hero__title">
+        Cash Payment Reimagined
+      </h1>
+      <h3
+        data-san="fadeIn"
+        data-san-delay="200"
+        data-i18n="hero.text"
+        class="hero__text"
+      >
+        Meet the online payment platform, replace cash with an easier, safer,
+        more secure payment, built for everyone & for every business.
+      </h3>
+      <button
+        data-san="fadeIn"
+        data-san-delay="400"
+        data-toggle="modal"
+        data-target="#joinUsModal"
+        class="hero__cta-btn"
+      >
+        <span data-i18n="hero.cta">Join e-Cash for Free</span>
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
+    <!-- End Hero-->
+
+    <!-- Join Us -->
+    <section class="joinus">
+      <lottie-player
+        class="joinus__side-image"
+        src="./assets/lotties/Full width Animated Lines (white).json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
+
+      <div class="joinus__content">
+        <img
+          data-san="fadeIn"
+          src="./assets/images/logo-only.svg"
+          class="joinus__content__logo"
+        />
+        <h1
+          data-san="fadeIn"
+          data-san-delay="100"
+          data-i18n="join-us-section.title"
+          class="joinus__content__title"
+        >
+          Join us in making the future
+        </h1>
+        <div
+          data-san="fadeIn"
+          data-san-delay="200"
+          class="joinus__content__links"
+        >
+          <a
+            asp-controller="Home"
+            asp-action="JoinAsMerchant"
+            data-i18n="join-us-section.join-as-merchant"
+            class="joinus__content__links__link"
+            >Join as Merchant</a
+          >
+          <a
+            asp-controller="Home"
+            asp-action="JoinAsAgent"
+            data-i18n="join-us-section.join-as-agent"
+            class="joinus__content__links__link"
+            >Join as Agent</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- End Join Us -->
+
+    <!-- About Us -->
+    <div id="about-us" class="about-us">
+      <div class="about-us__item about-us__item-reverse">
+        <div data-san="slideLeft" class="about-us__item__text">
+          <small
+            data-i18n="about-us.WIEC.start"
+            class="about-us__item__text__start"
+          >
+            syria's online payment
+          </small>
+
+          <h1
+            data-i18n="about-us.WIEC.title"
+            class="about-us__item__text__title"
+          >
+            What is E-Cash
+          </h1>
+          <p class="about-us__item__text__paragraph">
+            <abbr data-i18n="about-us.WIEC.paragraph.frst"
+              >A technology-first approach to payments and finance.</abbr
+            ><br />
+            <abbr data-i18n="about-us.WIEC.paragraph.scnd">
+              We bring together everything that’s required to build websites and
+              apps that accept payments and send payouts in Syria.
+            </abbr>
+          </p>
+        </div>
+        <div data-san="fadeIn" class="about-us__item__image">
+          <lottie-player
+            src="./assets/lotties/WhatIsE-Cash.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+        </div>
+      </div>
+
+      <div class="about-us__item">
+        <div data-san="slideRight" class="about-us__item__text">
+          <small
+            data-i18n="about-us.OM.start"
+            class="about-us__item__text__start"
+          >
+            about us
+          </small>
+
+          <h1 data-i18n="about-us.OM.title" class="about-us__item__text__title">
+            Our Mission
+          </h1>
+          <p class="about-us__item__text__paragraph">
+            <abbr data-i18n="about-us.OM.paragraph.frst">
+              e-Cash mission is to drive higher conversion by creating an online
+              payment experience & help increase sales </abbr
+            ><br /><br />
+            <abbr data-i18n="about-us.OM.paragraph.scnd">
+              Reach more buyers in more places, as single integration can give
+              you access to different markets, distribution channels, new
+              geographies & new revenue streams. </abbr
+            ><br /><br />
+            <abbr data-i18n="about-us.OM.paragraph.thrd">
+              Keep data secure by using E-cash partners that will help you fight
+              fraud transaction & keeping data secure.
+            </abbr>
+          </p>
+        </div>
+        <div data-san="fadeIn" class="about-us__item__image">
+          <lottie-player
+            src="./assets/lotties/OurMission.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+        </div>
+      </div>
+
+      <div class="about-us__item about-us__item-reverse">
+        <div data-san="slideLeft" class="about-us__item__text">
+          <small
+            data-i18n="about-us.OV.start"
+            class="about-us__item__text__start"
+          >
+            about us
+          </small>
+          <h1 data-i18n="about-us.OV.title" class="about-us__item__text__title">
+            Our Vision
+          </h1>
+          <p class="about-us__item__text__paragraph">
+            <abbr data-i18n="about-us.OV.paragraph.frst">
+              e-Cash vision is to create ecosystem of trusted partners by
+              Building commerce experiences alongside partner content customer’s
+              trust. </abbr
+            ><br /><br />
+            <abbr data-i18n="about-us.OV.paragraph.scnd">
+              Bundle your offering with companion products or services to enable
+              simultaneous purchases. Deliver a checkout experience that looks
+              and feels like wherever a customer is buying.
+            </abbr>
+          </p>
+        </div>
+        <div data-san="fadeIn" class="about-us__item__image">
+          <lottie-player
+            src="./assets/lotties/OurVision.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+        </div>
+      </div>
+    </div>
+    <!-- End About Us -->
+
+    <!-- Our Services -->
+    <section id="our-services" class="our-services">
+      <h1
+        data-san="fadeIn"
+        data-i18n="our-services.title"
+        class="our-services__title"
+      >
+        Our Services
+      </h1>
+      <div data-san="slideTop" class="our-services__body">
+        <div class="row our-services__body__container shadow">
+          <div class="col-md-3 p-0">
+            <!-- Tabs nav -->
+            <div
+              class="nav flex-column nav-pills nav-pills-custom h-100"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical"
+            >
+              <a
+                class="nav-link mb-3 p-3 active flex-md-fill"
+                id="v-pills-home-tab"
+                data-toggle="tab"
+                data-target="#v-pills-home"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true"
+              >
+                <small
+                  data-i18n="our-services.tab1.start"
+                  class="our-services__body__container__tab__start"
+                >
+                  Online Payment
+                </small>
+                <h3
+                  data-i18n="our-services.tab1.title"
+                  class="our-services__body__container__tab__title"
+                >
+                  e-Commerce
+                </h3>
+                <p
+                  data-i18n="our-services.tab1.paragraph"
+                  class="our-services__body__container__tab__paragraph"
+                >
+                  We provide e-Commerce websites in Syria with online payments,
+                  with e-Cash website visitors now can shop and pay online for
+                  your products.
+                </p>
+              </a>
+
+              <a
+                class="nav-link mb-3 p-3 flex-md-fill"
+                id="v-pills-profile-tab"
+                data-toggle="tab"
+                data-target="#v-pills-profile"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="false"
+              >
+                <small
+                  data-i18n="our-services.tab1.start"
+                  class="our-services__body__container__tab__start"
+                >
+                  Mobile payment
+                </small>
+                <h3
+                  data-i18n="our-services.tab1.title"
+                  class="our-services__body__container__tab__title"
+                >
+                  Physical Stores
+                </h3>
+                <p
+                  data-i18n="our-services.tab1.paragraph"
+                  class="our-services__body__container__tab__paragraph"
+                >
+                  e-Cash allow clients to pay online in your physical store for
+                  products, all you need is our app to complete the payment.
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <!-- Tabs content -->
+            <div class="tab-content" id="v-pills-tabContent">
+              <div
+                class="tab-pane fade rounded bg-white show active p-5"
+                id="v-pills-home"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab"
+              >
+                <div class="our-services__body__container__services">
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service1-item1.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service1.item1"
+                      class="our-services__body__container__services__item__text"
+                    >
+                      Website visitor browse the products on your eCommerce
+                    </span>
+                  </div>
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service1-item2.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service1.item2"
+                      class="our-services__body__container__services__item__text"
+                      >Add what he likes to his cart</span
+                    >
+                  </div>
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service1-item3.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service1.item3"
+                      class="our-services__body__container__services__item__text"
+                      >Start the check out process</span
+                    >
+                  </div>
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service1-item4.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service1.item4"
+                      class="our-services__body__container__services__item__text"
+                      >Select e-Cash as payment method</span
+                    >
+                  </div>
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service1-item5.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service1.item5"
+                      class="our-services__body__container__services__item__text"
+                      >Select bank to withdraw from</span
+                    >
+                  </div>
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service1-item6.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service1.item6"
+                      class="our-services__body__container__services__item__text"
+                      >Pays directly on your website</span
+                    >
+                  </div>
+                </div>
+
+                <span class="our-services__body__container__services__message">
+                  <img
+                    src="./assets/images/check.png"
+                    class="our-services__body__container__services__message__icon"
+                  />
+                  <span
+                    data-i18n="our-services.service1.check"
+                    class="our-services__body__container__services__message__text"
+                    >Payment is done quickly and securely</span
+                  >
+                </span>
+              </div>
+
+              <div
+                class="tab-pane fade rounded bg-white p-5"
+                id="v-pills-profile"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <div class="our-services__body__container__services">
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service2-item1.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service2.item1"
+                      class="our-services__body__container__services__item__text"
+                      >Client picks all his goods from your store</span
+                    >
+                  </div>
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service2-item2.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service2.item2"
+                      class="our-services__body__container__services__item__text"
+                      >Opens our e-Cash app</span
+                    >
+                  </div>
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service2-item3.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service2.item3"
+                      class="our-services__body__container__services__item__text"
+                      >Select e-Cash as a payment method</span
+                    >
+                  </div>
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service2-item4.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service2.item4"
+                      class="our-services__body__container__services__item__text"
+                      >Select bank to withdraw from</span
+                    >
+                  </div>
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service2-item5.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service2.item5"
+                      class="our-services__body__container__services__item__text"
+                      >Show his e-Cahs QR code</span
+                    >
+                  </div>
+                  <div class="our-services__body__container__services__item">
+                    <img
+                      src="./assets/images/service2-item6.png"
+                      alt=""
+                      class="our-services__body__container__services__item__image"
+                    />
+                    <span
+                      data-i18n="our-services.service2.item6"
+                      class="our-services__body__container__services__item__text"
+                      >Store employee scans the code</span
+                    >
+                  </div>
+                </div>
+
+                <span class="our-services__body__container__services__message">
+                  <img
+                    src="./assets/images/check.png"
+                    class="our-services__body__container__services__message__icon"
+                  />
+                  <span
+                    data-i18n="our-services.service2.check"
+                    class="our-services__body__container__services__message__text"
+                    >Payment is done quickly and securely</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Our Services -->
+
+    <!-- Benefits -->
+    <section id="benefits" class="benefits">
+      <img
+        src="./assets/images/benefits-bg-lines.png"
+        class="benefits__sideimage"
+      />
+
+      <div data-san="slideRight" class="benefits__content">
+        <small data-i18n="benefits.start" class="benefits__content__start"
+          >Safe, simple, and helpful</small
+        >
+
+        <h1 data-i18n="benefits.title" class="benefits__content__title">
+          Benefits
+        </h1>
+
+        <ul class="benefits__content__points">
+          <li
+            data-i18n="benefits.item1"
+            class="benefits__content__points__item"
+          >
+            Faster Payments with Best Success Rates
+          </li>
+          <li
+            data-i18n="benefits.item2"
+            class="benefits__content__points__item"
+          >
+            Optimised for web and mobile
+          </li>
+          <li
+            data-i18n="benefits.item3"
+            class="benefits__content__points__item"
+          >
+            Reach more buyers in more places
+          </li>
+          <li
+            data-i18n="benefits.item4"
+            class="benefits__content__points__item"
+          >
+            Helping Businesses Grow
+          </li>
+          <li
+            data-i18n="benefits.item5"
+            class="benefits__content__points__item"
+          >
+            Outstanding customer experiences
+          </li>
+          <li
+            data-i18n="benefits.item6"
+            class="benefits__content__points__item"
+          >
+            World Class Security
+          </li>
+        </ul>
+      </div>
+
+      <img
+        data-san="slideLeft"
+        src="./assets/images/benefits-main-img.png"
+        class="benefits__image scale-hover-effect"
+      />
+    </section>
+    <!-- End Benefits -->
+
+    <!-- Features -->
+    <section class="features">
+      <small
+        data-san="fadeIn"
+        data-i18n="features.start"
+        class="features__start"
+        >Make your life easier with smart payment systems</small
+      >
+      <h1 data-san="fadeIn" data-i18n="features.title" class="features__title">
+        Features e-Cash Offers
+      </h1>
+
+      <div class="features__content">
+        <div data-san="slideTop" class="features__content__item">
+          <lottie-player
+            class="features__content__item__img"
+            src="./assets/lotties/Security.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+          <div class="features__content__item__text">
+            <h3
+              data-i18n="features.ftr1.title"
+              class="features__content__item__text__title"
+            >
+              Advanced security features
+            </h3>
+            <p
+              data-i18n="features.ftr1.text"
+              class="features__content__item__text__paragraph"
+            >
+              Manage risk & be more confident about fighting fraud
+            </p>
+          </div>
+        </div>
+
+        <div data-san="slideTop" class="features__content__item">
+          <lottie-player
+            class="features__content__item__img"
+            src="./assets/lotties/NoHiddenFees 2.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+          <div class="features__content__item__text">
+            <h3
+              data-i18n="features.ftr2.title"
+              class="features__content__item__text__title"
+            >
+              No Hidden Fees
+            </h3>
+            <p
+              data-i18n="features.ftr2.text"
+              class="features__content__item__text__paragraph"
+            >
+              Don’t worry about generated fees. We will make it clear how much
+              will charge on our services
+            </p>
+          </div>
+        </div>
+
+        <div data-san="slideTop" class="features__content__item">
+          <lottie-player
+            class="features__content__item__img"
+            src="./assets/lotties/EasyToSetUp.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+          <div class="features__content__item__text">
+            <h3
+              data-i18n="features.ftr3.title"
+              class="features__content__item__text__title"
+            >
+              Incredibly easy to setup
+            </h3>
+            <p
+              data-i18n="features.ftr3.text"
+              class="features__content__item__text__paragraph"
+            >
+              Simplify your integration using ecash. It dynamically adapts to
+              your customer’s app and website to increase conversion
+            </p>
+          </div>
+        </div>
+
+        <div data-san="slideTop" class="features__content__item">
+          <lottie-player
+            class="features__content__item__img"
+            src="./assets/lotties/Reporting and analytics 2.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></lottie-player>
+          <div class="features__content__item__text">
+            <h3
+              data-i18n="features.ftr4.title"
+              class="features__content__item__text__title"
+            >
+              Reporting and analytics
+            </h3>
+            <p
+              data-i18n="features.ftr4.text"
+              class="features__content__item__text__paragraph"
+            >
+              Monitor transaction process help you prevent the tricks. Provide
+              multiple protection methods
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Features -->
+
+    <!-- How It Works -->
+    <div id="how-it-works" class="how-it-works">
+      <lottie-player
+        class="how-it-works__side-image"
+        src="./assets/lotties/Full width Animated Lines (blue).json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
+
+      <div class="how-it-works__box">
+        <h1
+          data-san="fadeIn"
+          data-i18n="how-it-works.title"
+          class="how-it-works__box__title"
+        >
+          How it works
+        </h1>
+
+        <div class="how-it-works__box__steps">
+          <div class="how-it-works__box__steps__line"></div>
+
+          <div data-san="slideRight" class="how-it-works__box__steps__step">
+            <img
+              src="./assets/images/step1.png"
+              class="how-it-works__box__steps__step__icon"
+            />
+
+            <h3
+              data-i18n="how-it-works.step1.title"
+              class="how-it-works__box__steps__step__title"
+            >
+              Select a role
+            </h3>
+            <p
+              data-i18n="how-it-works.step1.text"
+              class="how-it-works__box__steps__step__text"
+            >
+              Merchant, Agent
+            </p>
+          </div>
+
+          <div
+            data-san="slideRight"
+            data-san-delay="100"
+            class="how-it-works__box__steps__step"
+          >
+            <img
+              src="./assets/images/step2.png"
+              class="how-it-works__box__steps__step__icon"
+            />
+
+            <h3
+              data-i18n="how-it-works.step2.title"
+              class="how-it-works__box__steps__step__title"
+            >
+              Fill Our Form
+            </h3>
+            <p
+              data-i18n="how-it-works.step2.text"
+              class="how-it-works__box__steps__step__text"
+            >
+              Answer a few simple questions
+            </p>
+          </div>
+
+          <div
+            data-san="slideRight"
+            data-san-delay="200"
+            class="how-it-works__box__steps__step"
+          >
+            <img
+              src="./assets/images/step3.png"
+              class="how-it-works__box__steps__step__icon"
+            />
+
+            <h3
+              data-i18n="how-it-works.step3.title"
+              class="how-it-works__box__steps__step__title"
+            >
+              Submit
+            </h3>
+            <p
+              data-i18n="how-it-works.step3.text"
+              class="how-it-works__box__steps__step__text"
+            >
+              Review answers and submit them to our team
+            </p>
+          </div>
+
+          <div
+            data-san="slideRight"
+            data-san-delay="300"
+            class="how-it-works__box__steps__step"
+          >
+            <img
+              src="./assets/images/step4.png"
+              class="how-it-works__box__steps__step__icon"
+            />
+
+            <h3
+              data-i18n="how-it-works.step4.title"
+              class="how-it-works__box__steps__step__title"
+            >
+              You are Done!
+            </h3>
+            <p
+              data-i18n="how-it-works.step4.text"
+              class="how-it-works__box__steps__step__text"
+            >
+              Our team will contact you to let you know how to precede
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End How It Works -->
+
+    <!-- Mobile -->
+    <div class="mobile">
+      <div data-san="slideRight" class="mobile__content">
+        <h1 data-i18n="mobile.title" class="mobile__content__title">
+          Available On Mobiles Soon
+        </h1>
+
+        <p data-i18n="mobile.text" class="mobile__content__text">
+          We plan to support multiple platforms to provide the best user
+          services, download our app from your favorite store soon
+        </p>
+
+        <div class="mobile__content__buttons">
+          <img
+            src="./assets/images/apple-store.png"
+            alt="Apple Store"
+            class="mobile__content__buttons__img"
+          />
+          <img
+            src="./assets/images/google-play.png"
+            alt="Google Play"
+            class="mobile__content__buttons__img"
+          />
+        </div>
+      </div>
+
+      <img
+        data-san="slideLeft"
+        src="./assets/images/mobile.png"
+        alt="Available On Mobiles Soon"
+        class="mobile__image scale-hover-effect"
+      />
+    </div>
+    <!-- End Mobile -->
+
+    <!-- Partners -->
+    <div class="partners">
+      <h1 data-san="fadeIn" data-i18n="partners.title" class="partners__title">
+        Partners
+      </h1>
+      <h3
+        data-san="fadeIn"
+        data-san-delay="200"
+        data-i18n="partners.subtitle"
+        class="partners__subtitle"
+      >
+        Powering payments for partners around Syria
+      </h3>
+      <p
+        data-san="fadeIn"
+        data-san-delay="400"
+        data-i18n="partners.text"
+        class="partners__text"
+      >
+        Our partners helping to create an innovative future this is why they
+        partner with us
+      </p>
+
+      <div class="partners__images">
+        <img
+          data-san="slideTop"
+          src="./assets/images/sh-b.png"
+          alt="SHINHAN BANK"
+          class="partners__images__img"
+        />
+        <img
+          data-san="slideTop"
+          data-san-delay="100"
+          src="./assets/images/tp-b.png"
+          alt="TP BANK"
+          class="partners__images__img"
+        />
+        <img
+          data-san="slideTop"
+          data-san-delay="200"
+          src="./assets/images/acb.png"
+          alt="ACB"
+          class="partners__images__img"
+        />
+        <img
+          data-san="slideTop"
+          data-san-delay="300"
+          src="./assets/images/gucci.png"
+          alt="GUCCI"
+          class="partners__images__img"
+        />
+        <img
+          data-san="slideTop"
+          data-san-delay="400"
+          src="./assets/images/nike.png"
+          alt="NIKE"
+          class="partners__images__img"
+        />
+        <img
+          data-san="slideTop"
+          data-san-delay="500"
+          src="./assets/images/puma.png"
+          alt="PUMA"
+          class="partners__images__img"
+        />
+      </div>
+    </div>
+    <!-- End Partners -->
+
+    <!-- Join Us -->
+    <section class="joinus">
+      <lottie-player
+        class="joinus__side-image"
+        src="./assets/lotties/Full width Animated Lines (white).json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></lottie-player>
+
+      <div class="joinus__content">
+        <img
+          data-san="fadeIn"
+          src="./assets/images/logo-only.svg"
+          class="joinus__content__logo"
+        />
+        <h1
+          data-san="fadeIn"
+          data-san-delay="100"
+          data-i18n="join-us-section.title"
+          class="joinus__content__title"
+        >
+          Join us in making the future
+        </h1>
+        <div
+          data-san="fadeIn"
+          data-san-delay="200"
+          class="joinus__content__links"
+        >
+          <a
+            asp-controller="Home"
+            asp-action="JoinAsMerchant"
+            data-i18n="join-us-section.join-as-merchant"
+            class="joinus__content__links__link"
+            >Join as Merchant</a
+          >
+          <a
+            asp-controller="Home"
+            asp-action="JoinAsAgent"
+            data-i18n="join-us-section.join-as-agent"
+            class="joinus__content__links__link"
+            >Join as Agent</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+      <img
+        src="./assets/images/footer-bg-left.png"
+        class="footer__side-image footer__side-image--left"
+      />
+      <img
+        src="./assets/images/footer-bg-right.png"
+        class="footer__side-image footer__side-image--right"
+      />
+
+      <div class="footer__brand">
+        <img
+          src="./assets/images/footer-logo.png"
+          alt="E-Cash"
+          class="footer__brand__logo"
+        />
+
+        <span data-i18n="footer.copywrite1" class="footer__brand__copywrite"
+          >Copyright © 2021 E-Cash</span
+        >
+        <span data-i18n="footer.copywrite2" class="footer__brand__copywrite"
+          >All rights reserved</span
+        >
+
+        <div class="footer__brand__social">
+          <a href="#"
+            ><img
+              src="./assets/images/Facebook.png"
+              alt="E-Cash Facebook"
+              class="footer__brand__social__icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="./assets/images/Instagram.png"
+              alt="E-Cash Instagram"
+              class="footer__brand__social__icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="./assets/images/LinkedIn.png"
+              alt="E-Cash LinkedIn"
+              class="footer__brand__social__icon"
+          /></a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <h3 data-i18n="footer.company.title" class="footer__links__title">
+          Company
+        </h3>
+
+        <a
+          href="/#about-us"
+          data-i18n="footer.company.link1"
+          href="#"
+          class="footer__links__link"
+          >About E-Cash</a
+        >
+        <a
+          href="/#our-services"
+          data-i18n="footer.company.link2"
+          href="#"
+          class="footer__links__link"
+          >Our Services</a
+        >
+        <a
+          href="/#benefits"
+          data-i18n="footer.company.link3"
+          href="#"
+          class="footer__links__link"
+          >Benefits</a
+        >
+        <a
+          href="/#how-it-works"
+          data-i18n="footer.company.link4"
+          href="#"
+          class="footer__links__link"
+          >How it works</a
+        >
+        <a
+          data-i18n="footer.company.link5"
+          href="/careers.html"
+          class="footer__links__link"
+          >Careers</a
+        >
+        <a
+          data-i18n="footer.company.link6"
+          data-toggle="modal"
+          data-target="#getInTouchModal"
+          class="footer__links__link"
+          >Get in touch</a
+        >
+      </div>
+
+      <div class="footer__links">
+        <h3 data-i18n="footer.integration.title" class="footer__links__title">
+          Integration
+        </h3>
+
+        <a
+          data-i18n="footer.integration.link1"
+          href="#"
+          class="footer__links__link"
+          >Documentation</a
+        >
+        <a
+          data-i18n="footer.integration.link2"
+          href="#"
+          class="footer__links__link"
+          >API Reference</a
+        >
+      </div>
+
+      <div class="footer__links">
+        <h3 data-i18n="footer.support.title" class="footer__links__title">
+          Support
+        </h3>
+
+        <a data-i18n="footer.support.link1" href="#" class="footer__links__link"
+          >Terms of service</a
+        >
+        <a data-i18n="footer.support.link2" href="#" class="footer__links__link"
+          >Privacy policy</a
+        >
+      </div>
+
+      <div class="footer__subscribe">
+        <h3 data-i18n="footer.subscribe.title" class="footer__subscribe__title">
+          Stay up to date
+        </h3>
+        <p data-i18n="footer.subscribe.text" class="footer__subscribe__text">
+          Subscribe to get the latest updates about E-Cash news & development,
+          be the first to invest in the new technology
+        </p>
+
+        <form id="subscribe-form" class="footer__subscribe__form">
+          <input
+            class="footer__subscribe__form__input"
+            placeholder="Your email address"
+            type="email"
+            id="email"
+            name="Email"
+            required
+          />
+          <input
+            class="footer__subscribe__form__btn"
+            type="submit"
+            value="Subscribe"
+          />
+        </form>
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <!--  -->
+    <!-- Modals Here -->
+
+    <!-- Join Modal -->
+    <div
+      class="modal fade"
+      id="joinUsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="joinUsModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content join-us-modal">
+          <div class="modal-body join-us-modal__body">
+            <button
+              type="button"
+              class="close join-us-modal__close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <img
+              src="./assets/images/solid-logo.png"
+              class="join-us-modal__logo"
+            />
+            <div class="join-us-modal__content">
+              <h1
+                data-i18n="join-us-section.title"
+                class="join-us-modal__content__title"
+              >
+                Join us in making the future
+              </h1>
+              <div class="join-us-modal__content__links">
+                <a
+                  href="/join-as-merchant.html"
+                  data-i18n="join-us-section.join-as-merchant"
+                  class="join-us-modal__content__links__link"
+                  >Join as Merchant</a
+                >
+                <a
+                  href="/join-as-agent.html"
+                  data-i18n="join-us-section.join-as-agent"
+                  class="join-us-modal__content__links__link"
+                  >Join as Agent</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GeT in Touch Modal -->
+    <div
+      class="modal fade"
+      id="getInTouchModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="getInTouchModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xlg modal-dialog-centered" role="document">
+        <div class="modal-content get-in-touch">
+          <div class="modal-body get-in-touch__body">
+            <button
+              type="button"
+              class="close get-in-touch__close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <!-- info -->
+            <div class="get-in-touch__body__info">
+              <h1
+                data-i18n="get-in-touch.info.title"
+                class="get-in-touch__body__info__title"
+              >
+                Get in Touch
+              </h1>
+              <p
+                data-i18n="get-in-touch.info.text"
+                class="get-in-touch__body__info__text"
+              >
+                If you have any questions or inquiries please get in touch, we
+                have a 24/7 support
+              </p>
+
+              <div class="get-in-touch__body__info__item">
+                <img
+                  src="./assets/images/phone.png"
+                  class="get-in-touch__body__info__item__icon"
+                />
+
+                <div class="get-in-touch__body__info__item__data">
+                  011 - 9535<br />
+                  011 - 2076
+                </div>
+              </div>
+
+              <div class="get-in-touch__body__info__item">
+                <img
+                  src="./assets/images/mail.png"
+                  class="get-in-touch__body__info__item__icon"
+                />
+
+                <div class="get-in-touch__body__info__item__data">
+                  <a href="mailto:support@e-cash.com">support@e-cash.com</a>
+                </div>
+              </div>
+
+              <div class="get-in-touch__body__info__item">
+                <img
+                  src="./assets/images/map-pin.png"
+                  class="get-in-touch__body__info__item__icon"
+                />
+
+                <div class="get-in-touch__body__info__item__data">
+                  Maza, Al Akram Mosque<br />
+                  Damascus, Syria
+                </div>
+              </div>
+            </div>
+
+            <!-- contact form -->
+            <div class="get-in-touch__body__contact">
+              <h3
+                data-i18n="get-in-touch.form.title"
+                class="get-in-touch__body__contact__title"
+              >
+                Or Send a quick message
+              </h3>
+
+              <form
+                id="get-in-touch-form"
+                class="get-in-touch__body__contact__form"
+              >
+                <!-- Name -->
+                <div class="form-group row">
+                  <label
+                    data-i18n="get-in-touch.form.name"
+                    for="inputName"
+                    class="col-sm-2 col-form-label"
+                    >Name</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputName"
+                      name="Name"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group row">
+                  <label
+                    data-i18n="get-in-touch.form.email"
+                    for="inputEmail"
+                    class="col-sm-2 col-form-label"
+                    >Email</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inputEmail"
+                      name="Email"
+                      placeholder="Your email address"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group row">
+                  <label
+                    data-i18n="get-in-touch.form.message"
+                    for="inputMessage"
+                    class="col-sm-2 col-form-label"
+                    >Message</label
+                  >
+                  <div class="col-sm-10">
+                    <textarea
+                      type="text"
+                      rows="4"
+                      class="form-control"
+                      id="inputMessage"
+                      name="Message"
+                      placeholder="Hey, I need help in..."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Send -->
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <button
+                      type="submit"
+                      class="float-right get-in-touch__body__contact__form__submit"
+                    >
+                      <span data-i18n="get-in-touch.form.submit">Submit</span>
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Modals -->
+
+    <!-- Toast -->
+    <!--     Submit Successfully -->
+    <div
+      style="position: fixed; top: 20px; right: 20px"
+      id="success-toast"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      class="toast"
+      data-autohide="false"
+    >
+      <div class="toast-header">
+        <i class="far fa-check-circle"></i>
+
+        <strong class="mr-auto">Succeeded</strong>
+        <button
+          type="button"
+          class="ml-2 mb-1 close"
+          data-dismiss="toast"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">Congratulation, the operation succeeded</div>
+    </div>
+
+    <!--     Error -->
+    <div
+      style="position: fixed; top: 20px; right: 20px"
+      id="failed-toast"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      class="toast"
+      data-autohide="false"
+    >
+      <div class="toast-header">
+        <i class="far fa-times-circle"></i>
+
+        <strong class="mr-auto">Failed</strong>
+        <button
+          type="button"
+          class="ml-2 mb-1 close"
+          data-dismiss="toast"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">The operation failed, please try again later</div>
+    </div>
+    <!-- End Toast -->
+
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!-- Scripts Here... -->
+
+    <!-- jQuery library -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js"></script>
+    <script src="./js/translate.js"></script>
+
+    <!-- lottie -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./js/scroll-animation.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/forms.js"></script>
+  </body>
+</html>

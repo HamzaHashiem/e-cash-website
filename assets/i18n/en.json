@@ -1,0 +1,113 @@
+{
+  "navbar": {
+    "about-e-cash": "About e-Cash",
+    "our-services": "Our Services",
+    "benefits": "Benefits",
+    "how-it-works": "How it works",
+    "careers": "Careers",
+    "get-in-touch": "Get in touch",
+    "join-e-cash": "Join e-Cash"
+  },
+  "hero": {
+    "title": "Cash Payment Reimagined",
+    "text": "Meet the online payment platform, replace cash with an easier, safer, more secure payment, built for everyone & for every business.",
+    "cta": "Join e-Cash for Free"
+  },
+  "join-us-section": {
+    "title": "Join us in making the future",
+    "join-as-agent": "Join as Agent",
+    "join-as-merchant": "Join as Merchant"
+  },
+  "about-us": {
+    "WIEC": {
+      "start": "syria's online payment",
+      "title": "What is E-Cash",
+      "paragraph": {
+        "frst": "A technology-first approach to payments and finance.",
+        "scnd": "We bring together everything that’s required to build websites and apps that accept payments and send payouts in syria."
+      }
+    },
+    "OM": {
+      "start": "about us",
+      "title": "Our Mission",
+      "paragraph": {
+        "frst": "e-Cash mission is to drive higher conversion by creating an online payment experience & help increase sales.",
+        "scnd": "Reach more buyers in more places, as single integration can give you access to different market, distribution channel, new geographies & new revenue streams.",
+        "thrd": "Keep data secure by using E-cash partners that will help you fight fraud transaction & keeping data secure."
+      }
+    },
+    "OV": {
+      "start": "about us",
+      "title": "Our Vision",
+      "paragraph": {
+        "frst": "e-Cash vision is to create ecosystem of trusted partners by Building commerce experiences alongside partner content customer’s trust.",
+        "scnd": "Bundle your offering with companion products or services to enable simultaneous purchases. Deliver a checkout experience that looks and feels like wherever a customer is buying."
+      }
+    }
+  },
+  "benefits": {
+    "start": "Safe, simple, and helpful",
+    "title": "Benefits",
+    "item1": "Faster Payments with Best Success Rates",
+    "item2": "Optimised for web and mobile",
+    "item3": "Reach more buyers in more places",
+    "item4": "Helping Businesses Grow",
+    "item5": "Outstanding customer experiences",
+    "item6": "World Class Security"
+  },
+  "how-it-works": {
+    "title": "How it works",
+    "step1": {
+      "title": "Select a role",
+      "text": "Merchant, Agent"
+    },
+    "step2": {
+      "title": "Fill Our Form",
+      "text": "Answer few simple questions"
+    },
+    "step3": {
+      "title": "Submit",
+      "text": "Review answers and submit to our team"
+    },
+    "step4": {
+      "title": "You are Done!",
+      "text": "Our team will contact you to let you know how to precede"
+    }
+  },
+  "mobile": {
+    "title": "Available On Mobiles Soon",
+    "text": "We plan to support multiple platforms to provide the best user services, download our app from your favorite store soon."
+  },
+  "partners": {
+    "title": "Partners",
+    "subtitle": "Powering payments for partners around Syria",
+    "text": "Our partners helping to create an innovative future this is why they partner with us"
+  },
+  "footer": {
+    "copywrite1": "Copyright © 2021 E-Cash",
+    "copywrite2": "All rights reserved",
+    "company": {
+      "title": "Company",
+      "link1": "About E-Cash",
+      "link2": "Our Services",
+      "link3": "Benefits",
+      "link4": "How it works",
+      "link5": "Careers",
+      "link6": "Get in touch"
+    },
+    "integration": {
+      "title": "Integration",
+      "link1": "Documentation",
+      "link2": "API Reference"
+    },
+    "support": {
+      "title": "Support",
+      "link1": "Terms of service",
+      "link2": "Privacy policy"
+    },
+    "subscribe": {
+      "title": "Stay up to date",
+      "text": "Subscribe to get the latest updates about E-Cash news & development, be the first to invest in the new technology"
+    }
+  }
+}

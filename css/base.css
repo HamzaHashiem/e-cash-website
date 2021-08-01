@@ -1,0 +1,126 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Manrope", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+button {
+  outline: none !important;
+}
+
+html,
+body {
+  font-size: 16px;
+}
+@media (min-width: 1440px) {
+  html,
+body {
+    font-size: 26px !important;
+  }
+}
+@media (max-width: 959px) {
+  html,
+body {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 599px) {
+  html,
+body {
+    font-size: 12px !important;
+  }
+}
+
+.modal-xlg {
+  width: 72vw !important;
+  margin-inline: auto;
+  max-width: unset;
+}
+
+.back-top {
+  width: 35px;
+  height: 35px;
+  background: #ffffff;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 100px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 9999999;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  transition: 200ms;
+}
+@media (max-width: 599px) {
+  .back-top {
+    width: 30px;
+    height: 30px;
+    bottom: 30px;
+    right: 30px;
+  }
+}
+.back-top:hover {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.12);
+  transition: 200ms;
+}
+.back-top__icon {
+  color: #1e7294;
+  font-size: 18px;
+}
+@media (max-width: 599px) {
+  .back-top__icon {
+    font-size: 16px;
+  }
+}
+
+.toast-header .fa-check-circle {
+  color: green;
+  margin-inline-end: 5px;
+}
+.toast-header .fa-times-circle {
+  color: red;
+  margin-inline-end: 5px;
+}
+.toast-header .fa-info-circle {
+  color: #21b7e6;
+  margin-inline-end: 5px;
+}
+
+.toast {
+  z-index: -1;
+  transition: 200ms !important;
+}
+.toast.show {
+  z-index: inherit;
+}
+
+@media (max-width: 599px) {
+  .p-5 {
+    padding: 2rem !important;
+  }
+}
+
+.scale-hover-effect {
+  backface-visibility: hidden;
+  transition: 600ms;
+}
+.scale-hover-effect:hover {
+  transition: 600ms;
+  transform: scale(1.02) translateY(-15px);
+}
+
+/*# sourceMappingURL=base.css.map */

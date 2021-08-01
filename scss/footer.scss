@@ -1,0 +1,221 @@
+@import "../assets/mixins.scss";
+@import "../assets/variables.scss";
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 60vh;
+  align-content: center;
+  background-image: url(../assets/images/BG-180.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @media (map-get($mat-grid-breakpoints, sm)) {
+    height: auto;
+    padding: 35px 0;
+  }
+
+  &__side-image {
+    position: absolute;
+    top: 0;
+    height: 350px;
+
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+  }
+
+  &__brand {
+    flex: 0 0 33%;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 90px;
+    z-index: 1;
+
+    @media (map-get($mat-grid-breakpoints, md)) {
+      flex: 0 0 28%;
+    }
+
+    @media (map-get($mat-grid-breakpoints, sm)) {
+      flex: 1 0 100%;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0 15px;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+
+    @media (map-get($mat-grid-breakpoints, xs)) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__logo {
+      width: 125px;
+      margin-bottom: 20px;
+
+      @media (map-get($mat-grid-breakpoints, sm)) {
+        margin-inline-end: 10px;
+      }
+
+      @media (map-get($mat-grid-breakpoints, xs)) {
+        width: 90px;
+        height: 55px;
+        object-fit: contain;
+        margin: 0 auto 15px;
+      }
+    }
+
+    &__copywrite {
+      font-size: 0.9rem;
+      color: $gray;
+
+      @media (map-get($mat-grid-breakpoints, sm)) {
+        margin: 0 5px;
+      }
+    }
+
+    &__social {
+      margin-top: 20px;
+
+      @media (map-get($mat-grid-breakpoints, sm)) {
+        margin: 0;
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translate(-55%, 25px);
+      }
+
+      @media (map-get($mat-grid-breakpoints, xs)) {
+        margin-top: 20px;
+        display: block;
+        position: relative;
+        left: auto;
+        transform: none;
+      }
+
+      &__icon {
+        width: 25px;
+        margin-inline-end: 12px;
+
+        @media (map-get($mat-grid-breakpoints, xs)) {
+          margin-inline: 8px;
+        }
+      }
+    }
+  }
+
+  &__links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    @media (map-get($mat-grid-breakpoints, sm)) {
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &__link {
+      color: $gray;
+      font-size: 0.9rem;
+      text-decoration: none;
+      margin-bottom: 10px;
+
+      &:hover {
+        text-decoration: underline;
+        color: $dark;
+      }
+    }
+  }
+
+  &__subscribe {
+    flex: 0 0 28%;
+    z-index: 1;
+
+    @media (map-get($mat-grid-breakpoints, md)) {
+      flex: 0 0 33%;
+    }
+
+    @media (map-get($mat-grid-breakpoints, sm)) {
+      flex: 1 0 100%;
+      margin-top: 25px;
+      padding: 0 25px;
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      font-size: 0.9rem;
+      color: $gray;
+      width: 280px;
+
+      @media (map-get($mat-grid-breakpoints, min-lg)) {
+        width: 80%;
+      }
+
+      @media (map-get($mat-grid-breakpoints, sm)) {
+        margin-inline: auto;
+      }
+
+      @media (map-get($mat-grid-breakpoints, xs)) {
+        width: 100%;
+      }
+    }
+
+    &__form {
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      @media (map-get($mat-grid-breakpoints, min-lg)) {
+        width: 80%;
+      }
+
+      @media (map-get($mat-grid-breakpoints, sm)) {
+        margin-inline: auto;
+      }
+
+      @media (map-get($mat-grid-breakpoints, xs)) {
+        width: 100%;
+      }
+
+      &__input {
+        width: 100%;
+        margin-bottom: 10px;
+        border: 0;
+        filter: invert(0.2);
+        padding: 4px 10px;
+        border-radius: 12px;
+        outline: none;
+      }
+
+      &__btn {
+        border: none;
+        background: $primary-light;
+        padding: 10px 25px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        color: $white;
+      }
+    }
+  }
+}

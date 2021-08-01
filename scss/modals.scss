@@ -1,0 +1,190 @@
+@import "../assets/mixins.scss";
+@import "../assets/variables.scss";
+
+// Modals
+// join-us-modal
+.join-us-modal {
+  border-radius: 25px;
+
+  &__body {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 70px 30px;
+
+    @media (map-get($mat-grid-breakpoints, sm)) {
+      flex-direction: column;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  &__logo {
+    height: 140px;
+
+    @media (map-get($mat-grid-breakpoints, sm)) {
+      height: 75px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+
+    @media (map-get($mat-grid-breakpoints, sm)) {
+      text-align: center;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: $black;
+    }
+
+    &__links {
+      margin: 10px 0;
+      width: 100%;
+
+      &__link {
+        color: $primary-light;
+        margin-inline-end: 60px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: 200ms;
+        position: relative;
+
+        @media (map-get($mat-grid-breakpoints, sm)) {
+          margin: 0 25px;
+        }
+
+        &:hover {
+          transition: 200ms;
+          color: darken($primary-light, 12%);
+        }
+
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f105";
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          right: -25px;
+          top: 56%;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.get-in-touch {
+  border-radius: 25px;
+  overflow: hidden;
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  &__body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0;
+
+    @media (map-get($mat-grid-breakpoints, sm)) {
+      flex-direction: column;
+    }
+
+    &__info {
+      flex: 0 0 45%;
+      background-image: url(../assets/images/BG-contact.png);
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 80px 60px;
+
+      @media (map-get($mat-grid-breakpoints, sm)) {
+        padding: 25px;
+      }
+
+      &__title {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: $black;
+      }
+
+      &__text {
+        color: $gray;
+        font-size: 0.9rem;
+        margin-bottom: 50px;
+
+        @media (map-get($mat-grid-breakpoints, sm)) {
+          margin-bottom: 25px;
+        }
+      }
+
+      &__item {
+        margin-bottom: 14px;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: $gray;
+
+        &__icon {
+          margin-inline-end: 10px;
+          width: 20px;
+        }
+      }
+    }
+
+    &__contact {
+      flex: 0 0 55%;
+      padding: 80px 60px;
+      @media (map-get($mat-grid-breakpoints, sm)) {
+        padding: 25px;
+      }
+
+      &__title {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: $black;
+        margin-bottom: 25px;
+      }
+
+      & .col-form-label {
+        font-size: 0.8rem;
+      }
+
+      & .form-control {
+        background: #f5f5f5;
+        border: none;
+        font-size: 0.8rem;
+      }
+
+      &__form__submit {
+        @include outline-button-with-icon($primary-light);
+        font-size: 0.8rem;
+        padding-block: 10px;
+        width: 110px;
+      }
+    }
+  }
+}

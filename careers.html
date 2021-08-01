@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-Cash | Careers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/nav-bar.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/modals.css" />
+    <link rel="stylesheet" href="./css/careers.css" />
+  </head>
+  <body>
+    <!-- Navbar-->
+    <nav class="nav-bar navbar navbar-expand-lg">
+      <div class="nav-bar__logo navbar-brand">
+        <a href="/">
+          <img
+            src="./assets/images/logo.svg"
+            alt="E-Cash Logo"
+            class="nav-bar__logo__img"
+        /></a>
+      </div>
+
+      <button
+        id="navbar-toggler-btn"
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarLinks"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="nav-bar__links collapse navbar-collapse" id="navbarLinks">
+        <a
+          href="/#about-us"
+          data-i18n="navbar.about-e-cash"
+          class="nav-bar__links__item"
+          >About e-Cash</a
+        >
+        <a
+          href="/#our-services"
+          data-i18n="navbar.our-services"
+          class="nav-bar__links__item"
+          >Our Services</a
+        >
+        <a
+          href="/#benefits"
+          data-i18n="navbar.benefits"
+          class="nav-bar__links__item"
+          >Benefits</a
+        >
+        <a
+          href="/#how-it-works"
+          data-i18n="navbar.how-it-works"
+          class="nav-bar__links__item"
+          >How it works</a
+        >
+        <a
+          data-i18n="navbar.careers"
+          class="nav-bar__links__item"
+          href="/careers.html"
+          >Careers</a
+        >
+        <a
+          data-toggle="modal"
+          data-target="#getInTouchModal"
+          data-i18n="navbar.get-in-touch"
+          class="nav-bar__links__item"
+          >Get in touch</a
+        >
+      </div>
+      <div class="nav-bar__join">
+        <button
+          data-toggle="modal"
+          data-target="#joinUsModal"
+          class="nav-bar__join__btn"
+        >
+          <span data-i18n="navbar.join-e-cash">Join e-Cash</span>
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Careers -->
+    <div class="join-as">
+      <div class="join-as__content">
+        <small data-i18n="careers.start" class="join-as__content__start"
+          >e-cash</small
+        >
+
+        <h1 data-i18n="careers.title" class="join-as__content__title">
+          Careers
+        </h1>
+
+        <p data-i18n="careers.text" class="join-as__content__text">
+          Have a chance to be one of our employees, help building an advanced
+          future and enjoy a fun, supporting environment.
+        </p>
+
+        <div class="join-as__content__positions">
+          <p class="join-as__content__positions__title">
+            Select one of our open vacances:
+          </p>
+          <span
+            class="join-as__content__positions__item"
+            onclick="selectPosition('General Director')"
+            >General Director</span
+          >
+          <span
+            class="join-as__content__positions__item"
+            onclick="selectPosition('Graphic Designer')"
+            >Graphic Designer</span
+          >
+          <span
+            class="join-as__content__positions__item"
+            onclick="selectPosition('Full stack web developer')"
+            >Full stack web developer</span
+          >
+          <span
+            class="join-as__content__positions__item"
+            onclick="selectPosition('Accountant')"
+            >Accountant</span
+          >
+        </div>
+
+        <form
+          id="careers-form"
+          class="join-as__content__form join-as__content__form--hide"
+        >
+          <!-- Position -->
+          <div class="form-group row">
+            <label
+              data-i18n="careers.position"
+              for="inputPosition"
+              class="col-sm-3 col-form-label"
+              >Position</label
+            >
+            <div class="col-sm-9">
+              <select
+                id="inputPosition"
+                name="Position"
+                class="form-control custom-select"
+                required
+              >
+                <option value="General Director">General Director</option>
+                <option value="Graphic Designer">Graphic Designer</option>
+                <option value="Full stack web developer">
+                  Full stack web developer
+                </option>
+                <option value="Accountant">Accountant</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- First Name -->
+          <div class="form-group row">
+            <label
+              data-i18n="careers.first-name"
+              for="inputFName"
+              class="col-sm-3 col-form-label"
+              >First Name</label
+            >
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="inputFName"
+                name="FirstName"
+                placeholder="John"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Last Name -->
+          <div class="form-group row">
+            <label
+              data-i18n="careers.last-name"
+              for="inputLName"
+              class="col-sm-3 col-form-label"
+              >Last Name</label
+            >
+            <div class="col-sm-9">
+              <input
+                type="text"
+                class="form-control"
+                id="inputLName"
+                name="LastName"
+                placeholder="Doe"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Birthdate -->
+          <div class="form-group row">
+            <label
+              data-i18n="careers.birthdate"
+              for="inputBirthdate"
+              class="col-sm-3 col-form-label"
+              >Birthdate</label
+            >
+            <div class="col-sm-9">
+              <div
+                id="datepicker"
+                class="input-group date"
+                data-date-format="dd-mm-yyyy"
+              >
+                <input
+                  class="form-control"
+                  name="Birthdate"
+                  placeholder="01-01-1990"
+                  type="text"
+                  value=""
+                  readonly
+                  required
+                />
+                <span class="input-group-addon"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gender -->
+          <div class="form-group row">
+            <label
+              data-i18n="careers.gender"
+              for="inputGender"
+              class="col-sm-3 col-form-label"
+              >Gender</label
+            >
+            <div class="col-sm-9" id="inputGender">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Gender"
+                  id="inlineRadio1"
+                  value="Male"
+                  required
+                />
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="Gender"
+                  id="inlineRadio2"
+                  value="Female"
+                  required
+                />
+                <label class="form-check-label" for="inlineRadio2"
+                  >Female</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group row">
+            <label
+              data-i18n="careers.email"
+              for="inputEmail"
+              class="col-sm-3 col-form-label"
+              >Email</label
+            >
+            <div class="col-sm-9">
+              <input
+                type="email"
+                name="Email"
+                class="form-control"
+                id="inputEmail"
+                placeholder="johndoe@email.com"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Phone number -->
+          <div class="form-group row">
+            <label
+              data-i18n="careers.phone-number"
+              for="inputContactPersonName"
+              class="col-sm-3 col-form-label"
+              >Phone number</label
+            >
+            <div class="col-sm-9">
+              <input
+                type="text"
+                name="PhoneNumber"
+                onkeydown="javascript:backspacerDOWN(this,event);"
+                onkeyup="javascript:backspacerUP(this,event);"
+                class="form-control"
+                id="inputContactPersonName"
+                placeholder="+963 987-654321"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="form-group row">
+            <label
+              data-i18n="careers.address"
+              for="inputAddress"
+              class="col-sm-3 col-form-label"
+              >Address</label
+            >
+            <div class="col-sm-9">
+              <input
+                type="text"
+                name="Address"
+                class="form-control"
+                id="inputAddress"
+                placeholder="Where is your business based?"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- File Drop Zoon -->
+          <div id="uploadArea">
+            <div id="dropZoon" class="upload-area__drop-zoon drop-zoon">
+              <span class="drop-zoon__icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <p
+                data-i18n="careers.upload-commercial-register"
+                class="drop-zoon__paragraph"
+              >
+                Upload commercial register (Optional)
+              </p>
+              <span
+                data-i18n="careers.please-wait"
+                id="loadingText"
+                class="drop-zoon__loading-text"
+                >Please Wait</span
+              >
+              <img
+                src=""
+                alt="Preview Image"
+                id="previewImage"
+                class="drop-zoon__preview-image"
+                draggable="false"
+              />
+              <input
+                type="file"
+                id="fileInput"
+                name="File"
+                class="drop-zoon__file-input"
+                accept=".pdf,.doc,.docm,.docx,image/x-png,image/gif,image/jpeg"
+              />
+            </div>
+          </div>
+          <!-- End File Drop Zoon -->
+
+          <!-- reCaptcha -->
+          <div id="form-recaptcha"></div>
+
+          <!-- Send -->
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <button type="submit" class="join-as__content__form__submit">
+                <span data-i18n="get-in-touch.form.submit">Submit</span>
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End Careers -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <img
+        src="./assets/images/footer-bg-left.png"
+        class="footer__side-image footer__side-image--left"
+      />
+      <img
+        src="./assets/images/footer-bg-right.png"
+        class="footer__side-image footer__side-image--right"
+      />
+
+      <div class="footer__brand">
+        <img
+          src="./assets/images/footer-logo.png"
+          alt="E-Cash"
+          class="footer__brand__logo"
+        />
+
+        <span data-i18n="footer.copywrite1" class="footer__brand__copywrite"
+          >Copyright © 2021 E-Cash</span
+        >
+        <span data-i18n="footer.copywrite2" class="footer__brand__copywrite"
+          >All rights reserved</span
+        >
+
+        <div class="footer__brand__social">
+          <a href="#"
+            ><img
+              src="./assets/images/Facebook.png"
+              alt="E-Cash Facebook"
+              class="footer__brand__social__icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="./assets/images/Instagram.png"
+              alt="E-Cash Instagram"
+              class="footer__brand__social__icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="./assets/images/LinkedIn.png"
+              alt="E-Cash LinkedIn"
+              class="footer__brand__social__icon"
+          /></a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <h3 data-i18n="footer.company.title" class="footer__links__title">
+          Company
+        </h3>
+
+        <a
+          href="/#about-us"
+          data-i18n="footer.company.link1"
+          href="#"
+          class="footer__links__link"
+          >About E-Cash</a
+        >
+        <a
+          href="/#our-services"
+          data-i18n="footer.company.link2"
+          href="#"
+          class="footer__links__link"
+          >Our Services</a
+        >
+        <a
+          href="/#benefits"
+          data-i18n="footer.company.link3"
+          href="#"
+          class="footer__links__link"
+          >Benefits</a
+        >
+        <a
+          href="/#how-it-works"
+          data-i18n="footer.company.link4"
+          href="#"
+          class="footer__links__link"
+          >How it works</a
+        >
+        <a
+          data-i18n="footer.company.link5"
+          href="/careers.html"
+          class="footer__links__link"
+          >Careers</a
+        >
+        <a
+          data-i18n="footer.company.link6"
+          data-toggle="modal"
+          data-target="#getInTouchModal"
+          class="footer__links__link"
+          >Get in touch</a
+        >
+      </div>
+
+      <div class="footer__links">
+        <h3 data-i18n="footer.integration.title" class="footer__links__title">
+          Integration
+        </h3>
+
+        <a
+          data-i18n="footer.integration.link1"
+          href="#"
+          class="footer__links__link"
+          >Documentation</a
+        >
+        <a
+          data-i18n="footer.integration.link2"
+          href="#"
+          class="footer__links__link"
+          >API Reference</a
+        >
+      </div>
+
+      <div class="footer__links">
+        <h3 data-i18n="footer.support.title" class="footer__links__title">
+          Support
+        </h3>
+
+        <a data-i18n="footer.support.link1" href="#" class="footer__links__link"
+          >Terms of service</a
+        >
+        <a data-i18n="footer.support.link2" href="#" class="footer__links__link"
+          >Privacy policy</a
+        >
+      </div>
+
+      <div class="footer__subscribe">
+        <h3 data-i18n="footer.subscribe.title" class="footer__subscribe__title">
+          Stay up to date
+        </h3>
+        <p data-i18n="footer.subscribe.text" class="footer__subscribe__text">
+          Subscribe to get the latest updates about E-Cash news & development,
+          be the first to invest in the new technology
+        </p>
+
+        <form id="subscribe-form" class="footer__subscribe__form">
+          <input
+            class="footer__subscribe__form__input"
+            placeholder="Your email address"
+            type="email"
+            id="email"
+            name="Email"
+            required
+          />
+          <input
+            class="footer__subscribe__form__btn"
+            type="submit"
+            value="Subscribe"
+          />
+        </form>
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <!--  -->
+    <!-- Modals Here -->
+
+    <!-- Join Modal -->
+    <div
+      class="modal fade"
+      id="joinUsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="joinUsModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content join-us-modal">
+          <div class="modal-body join-us-modal__body">
+            <button
+              type="button"
+              class="close join-us-modal__close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <img
+              src="./assets/images/solid-logo.png"
+              class="join-us-modal__logo"
+            />
+            <div class="join-us-modal__content">
+              <h1
+                data-i18n="join-us-section.title"
+                class="join-us-modal__content__title"
+              >
+                Join us in making the future
+              </h1>
+              <div class="join-us-modal__content__links">
+                <a
+                  href="/join-as-merchant.html"
+                  data-i18n="join-us-section.join-as-merchant"
+                  class="join-us-modal__content__links__link"
+                  >Join as Merchant</a
+                >
+                <a
+                  href="/join-as-agent.html"
+                  data-i18n="join-us-section.join-as-agent"
+                  class="join-us-modal__content__links__link"
+                  >Join as Agent</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GeT in Touch Modal -->
+    <div
+      class="modal fade"
+      id="getInTouchModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="getInTouchModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xlg modal-dialog-centered" role="document">
+        <div class="modal-content get-in-touch">
+          <div class="modal-body get-in-touch__body">
+            <button
+              type="button"
+              class="close get-in-touch__close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <!-- info -->
+            <div class="get-in-touch__body__info">
+              <h1
+                data-i18n="get-in-touch.info.title"
+                class="get-in-touch__body__info__title"
+              >
+                Get in Touch
+              </h1>
+              <p
+                data-i18n="get-in-touch.info.text"
+                class="get-in-touch__body__info__text"
+              >
+                If you have any questions or inquiries please get in touch, we
+                have a 24/7 support
+              </p>
+
+              <div class="get-in-touch__body__info__item">
+                <img
+                  src="./assets/images/phone.png"
+                  class="get-in-touch__body__info__item__icon"
+                />
+
+                <div class="get-in-touch__body__info__item__data">
+                  011 - 9535<br />
+                  011 - 2076
+                </div>
+              </div>
+
+              <div class="get-in-touch__body__info__item">
+                <img
+                  src="./assets/images/mail.png"
+                  class="get-in-touch__body__info__item__icon"
+                />
+
+                <div class="get-in-touch__body__info__item__data">
+                  <a href="mailto:support@e-cash.com">support@e-cash.com</a>
+                </div>
+              </div>
+
+              <div class="get-in-touch__body__info__item">
+                <img
+                  src="./assets/images/map-pin.png"
+                  class="get-in-touch__body__info__item__icon"
+                />
+
+                <div class="get-in-touch__body__info__item__data">
+                  Maza, Al Akram Mosque<br />
+                  Damascus, Syria
+                </div>
+              </div>
+            </div>
+
+            <!-- contact form -->
+            <div class="get-in-touch__body__contact">
+              <h3
+                data-i18n="get-in-touch.form.title"
+                class="get-in-touch__body__contact__title"
+              >
+                Or Send a quick message
+              </h3>
+
+              <form
+                id="get-in-touch-form"
+                class="get-in-touch__body__contact__form"
+              >
+                <!-- Name -->
+                <div class="form-group row">
+                  <label
+                    data-i18n="get-in-touch.form.name"
+                    for="inputName"
+                    class="col-sm-2 col-form-label"
+                    >Name</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputName"
+                      name="Name"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group row">
+                  <label
+                    data-i18n="get-in-touch.form.email"
+                    for="inputEmail"
+                    class="col-sm-2 col-form-label"
+                    >Email</label
+                  >
+                  <div class="col-sm-10">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inputEmail"
+                      name="Email"
+                      placeholder="Your email address"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group row">
+                  <label
+                    data-i18n="get-in-touch.form.message"
+                    for="inputMessage"
+                    class="col-sm-2 col-form-label"
+                    >Message</label
+                  >
+                  <div class="col-sm-10">
+                    <textarea
+                      type="text"
+                      rows="4"
+                      class="form-control"
+                      id="inputMessage"
+                      name="Message"
+                      placeholder="Hey, I need help in..."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Send -->
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <button
+                      type="submit"
+                      class="float-right get-in-touch__body__contact__form__submit"
+                    >
+                      <span data-i18n="get-in-touch.form.submit">Submit</span>
+                      <i class="fas fa-chevron-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Modals -->
+
+    <!-- Toast -->
+    <!--     Submit Successfully -->
+    <div
+      style="position: fixed; top: 20px; right: 20px"
+      id="success-toast"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      class="toast"
+      data-autohide="false"
+    >
+      <div class="toast-header">
+        <i class="far fa-check-circle"></i>
+
+        <strong class="mr-auto">Succeeded</strong>
+        <button
+          type="button"
+          class="ml-2 mb-1 close"
+          data-dismiss="toast"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">Congratulation, the operation succeeded</div>
+    </div>
+
+    <!--     Error -->
+    <div
+      style="position: fixed; top: 20px; right: 20px"
+      id="failed-toast"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      class="toast"
+      data-autohide="false"
+    >
+      <div class="toast-header">
+        <i class="far fa-times-circle"></i>
+
+        <strong class="mr-auto">Failed</strong>
+        <button
+          type="button"
+          class="ml-2 mb-1 close"
+          data-dismiss="toast"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">The operation failed, please try again later</div>
+    </div>
+
+    <!-- reCaptcha -->
+    <div
+      style="position: fixed; top: 20px; right: 20px"
+      id="recaptcha-toast"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      class="toast"
+      data-autohide="false"
+    >
+      <div class="toast-header">
+        <i class="fas fa-info-circle"></i>
+
+        <strong class="mr-auto">Not Valid</strong>
+        <button
+          type="button"
+          class="ml-2 mb-1 close"
+          data-dismiss="toast"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">Please verify you are not a robot</div>
+    </div>
+    <!-- End Toast -->
+
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!-- Scripts Here... -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js"></script>
+    <script src="./js/translate.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="./js/upload.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/forms.js"></script>
+    <script src="./js/careers.js"></script>
+  </body>
+</html>

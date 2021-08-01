@@ -1,0 +1,41 @@
+@import "../assets/mixins.scss";
+@import "../assets/variables.scss";
+
+.static-page {
+  width: 100%;
+  padding-top: 110px;
+  padding-bottom: 60px;
+  height: auto;
+  min-height: 90vh !important;
+
+  @media (max-height: 750px) {
+    min-height: auto;
+  }
+
+  &__content {
+    width: 70%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px 130px;
+
+    @media (map-get($mat-grid-breakpoints, sm)) {
+      padding: 20px;
+      width: 85%;
+    }
+    @media (map-get($mat-grid-breakpoints, xs)) {
+      width: 95%;
+    }
+
+    &__title {
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    &__subtite {
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+  }
+}

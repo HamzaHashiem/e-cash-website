@@ -1,0 +1,120 @@
+@import "../assets/variables.scss";
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Manrope", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+button {
+  outline: none !important;
+}
+
+html,
+body {
+  font-size: 16px;
+
+  @media (min-width: 1440px) {
+    font-size: 26px !important;
+  }
+  @media (max-width: 959px) {
+    font-size: 14px !important;
+  }
+  @media (max-width: 599px) {
+    font-size: 12px !important;
+  }
+}
+
+.modal-xlg {
+  width: 72vw !important;
+  margin-inline: auto;
+  max-width: unset;
+}
+
+.back-top {
+  width: 35px;
+  height: 35px;
+  background: $white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 100px;
+  box-shadow: 1px 1px 4px rgb(0 0 0 / 10%);
+  position: fixed;
+  z-index: 9999999;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  transition: 200ms;
+
+  @media (map-get($mat-grid-breakpoints, xs)) {
+    width: 30px;
+    height: 30px;
+    bottom: 30px;
+    right: 30px;
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 12%);
+    transition: 200ms;
+  }
+
+  &__icon {
+    color: $primary;
+    font-size: 18px;
+    @media (map-get($mat-grid-breakpoints, xs)) {
+      font-size: 16px;
+    }
+  }
+}
+
+.toast-header {
+  & .fa-check-circle {
+    color: green;
+    margin-inline-end: 5px;
+  }
+  & .fa-times-circle {
+    color: red;
+    margin-inline-end: 5px;
+  }
+
+  & .fa-info-circle {
+    color: $primary-light;
+    margin-inline-end: 5px;
+  }
+}
+
+.toast {
+  z-index: -1;
+  transition: 200ms !important;
+
+  &.show {
+    z-index: inherit;
+  }
+}
+
+.p-5 {
+  @media (max-width: 599px) {
+    padding: 2rem !important;
+  }
+}
+
+.scale-hover-effect {
+  backface-visibility: hidden;
+  transition: 600ms;
+
+  &:hover {
+    transition: 600ms;
+    transform: scale(1.02) translateY(-15px);
+  }
+}

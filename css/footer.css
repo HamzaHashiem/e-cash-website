@@ -1,0 +1,222 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 60vh;
+  align-content: center;
+  background-image: url(../assets/images/BG-180.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+@media (max-width: 990px) {
+  .footer {
+    height: auto;
+    padding: 35px 0;
+  }
+}
+.footer__side-image {
+  position: absolute;
+  top: 0;
+  height: 350px;
+}
+.footer__side-image--left {
+  left: 0;
+}
+.footer__side-image--right {
+  right: 0;
+}
+.footer__brand {
+  flex: 0 0 33%;
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 90px;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  .footer__brand {
+    flex: 0 0 28%;
+  }
+}
+@media (max-width: 990px) {
+  .footer__brand {
+    flex: 1 0 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 15px;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 599px) {
+  .footer__brand {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer__brand__logo {
+  width: 125px;
+  margin-bottom: 20px;
+}
+@media (max-width: 990px) {
+  .footer__brand__logo {
+    margin-inline-end: 10px;
+  }
+}
+@media (max-width: 599px) {
+  .footer__brand__logo {
+    width: 90px;
+    height: 55px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+  }
+}
+.footer__brand__copywrite {
+  font-size: 0.9rem;
+  color: #727788;
+}
+@media (max-width: 990px) {
+  .footer__brand__copywrite {
+    margin: 0 5px;
+  }
+}
+.footer__brand__social {
+  margin-top: 20px;
+}
+@media (max-width: 990px) {
+  .footer__brand__social {
+    margin: 0;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-55%, 25px);
+  }
+}
+@media (max-width: 599px) {
+  .footer__brand__social {
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    left: auto;
+    transform: none;
+  }
+}
+.footer__brand__social__icon {
+  width: 25px;
+  margin-inline-end: 12px;
+}
+@media (max-width: 599px) {
+  .footer__brand__social__icon {
+    margin-inline: 8px;
+  }
+}
+.footer__links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+@media (max-width: 990px) {
+  .footer__links {
+    text-align: center;
+  }
+}
+.footer__links__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.footer__links__link {
+  color: #727788;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.footer__links__link:hover {
+  text-decoration: underline;
+  color: #01244a;
+}
+.footer__subscribe {
+  flex: 0 0 28%;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  .footer__subscribe {
+    flex: 0 0 33%;
+  }
+}
+@media (max-width: 990px) {
+  .footer__subscribe {
+    flex: 1 0 100%;
+    margin-top: 25px;
+    padding: 0 25px;
+    text-align: center;
+  }
+}
+.footer__subscribe__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.footer__subscribe__text {
+  font-size: 0.9rem;
+  color: #727788;
+  width: 280px;
+}
+@media (min-width: 1440px) {
+  .footer__subscribe__text {
+    width: 80%;
+  }
+}
+@media (max-width: 990px) {
+  .footer__subscribe__text {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 599px) {
+  .footer__subscribe__text {
+    width: 100%;
+  }
+}
+.footer__subscribe__form {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media (min-width: 1440px) {
+  .footer__subscribe__form {
+    width: 80%;
+  }
+}
+@media (max-width: 990px) {
+  .footer__subscribe__form {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 599px) {
+  .footer__subscribe__form {
+    width: 100%;
+  }
+}
+.footer__subscribe__form__input {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 0;
+  filter: invert(0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+  outline: none;
+}
+.footer__subscribe__form__btn {
+  border: none;
+  background: #21b7e6;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,22 @@
+// Colors
+$white: #ffffff;
+$black: #000000;
+$gray: #727788;
+
+$primary: #1e7294;
+$primary-light: #21b7e6;
+$secondary: #66ffff;
+
+$light: #f6f9ff;
+$dark: #01244a;
+
+// breakpoints
+$mat-grid-breakpoints: (
+  xs: "max-width: 599px",
+  sm: "max-width: 990px",
+  md: "max-width: 1024px",
+  min-xs: "min-width: 599px",
+  min-sm: "min-width: 959px",
+  min-md: "min-width: 1100px",
+  min-lg: "min-width: 1440px",
+);
